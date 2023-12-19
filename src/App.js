@@ -1,25 +1,30 @@
-import logo from './logo.svg';
-import './App.css';
+import ToDoList from './ToDoList.js';
+import "./style.css";
 
-function App() {
-  return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
-    </div>
-  );
+const initial_values = [
+    {id: 0, text: "Water the plants", packed : false},
+    {id: 1, text: "To brush the teeth.", packed : true},
+    {id: 2, text: "Take the dog for a walk.", packed : false}
+];
+
+export default function App() {
+    return (
+        <div class="content-page">
+            <section>
+                <img src="data:image/png;base64,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" alt="logo" class="logo" />
+            </section>
+            <section class="column-part">
+                <div className="super-panel">
+                    <div className="title-panel"><h1>To-Do List</h1></div>
+                    <div className="todolist-panel">
+                        <ToDoList tasks={initial_values} />
+                    </div>
+                </div>
+                <p class="created">Created by: <a href="https://www.github.com/josueamaral15"><span class="creator">Josué Amaral</span></a></p>
+            </section>
+            <section>
+                <img src="https://files.passeidireto.com/9c310968-4e1b-4f0b-8c0a-8e2e93607511/9c310968-4e1b-4f0b-8c0a-8e2e93607511.png" alt="todolist" width="200px" height="200px" />
+            </section>
+        </div>
+    );
 }
-
-export default App;

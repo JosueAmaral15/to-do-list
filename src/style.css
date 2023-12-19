@@ -1,0 +1,101 @@
+.task-input {
+    width: 95%;
+    /*width : 20rem;*/
+    /*height: 2rem;*/
+    /*border: 1px solid black;*/
+    border-radius: 0.25rem;
+    /*padding: 0.25rem;*/
+    margin-bottom: 1rem;
+    font-weight: bold;
+    color: #444;
+    font-style:italic;
+    
+}
+
+.task-span {
+    /*width: 20rem;*/
+    padding: 0.25rem;
+    margin-bottom: 1rem;
+    max-width: 20rem;
+    max-height:1rem;
+    overflow: hidden;
+    display: inline-block;
+    /*background-color: cadetblue;*/
+    font-weight: bold;
+    color: #444;
+    font-style:italic;
+}
+
+.default-height {
+    height: 2rem;
+}
+
+.task-panel {
+    display:flex;
+    flex-direction: column;
+    justify-content: space-evenly;
+    margin : 1rem;
+    align-items: center;
+}
+
+.task-list{
+    display:flex;
+    flex-direction:column;
+    justify-content: space-evenly;
+    margin-block : 2rem;
+}
+
+.button-add{
+    width: 10rem;
+    height:2rem;
+}
+
+.title-panel{
+    background-color:aliceblue;
+    border-radius: 5rem;
+    border: 5px solid gray;
+    text-align: center;
+    color: gray;
+    margin-bottom: 2.5rem;
+}
+
+.super-panel {
+    width:35rem;
+    border-left: 4px dashed gray;
+    border-right: 4px dashed gray;
+    border-bottom: 4px dashed gray;
+    border-radius: 2.5rem;
+    background-color: mintcream;
+}
+
+.task-checkbox {
+    width : 2rem;
+    height: 2rem;
+    vertical-align:middle;
+}
+
+.content-page{
+    padding-top: 1rem;
+    display:flex;
+    width:100%;
+    flex-direction:row;
+    align-items: flex-start;
+    justify-content: center;
+}
+
+.created {
+    font-family: 'Alex Brush';
+}
+
+.column-part{
+    display:flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+}
+
+.component-task{
+    font-family:Alkatra;
+    /*accent-color: lightgreen;*/
+    /*letter-spacing : 0.125rem;*/
+}
